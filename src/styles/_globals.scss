@@ -10,6 +10,7 @@ body {
     width: 100%;
     height: 100%;
     font-size: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
     button {
         min-width: 44px;
@@ -24,6 +25,9 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 
     @include tablet {
         flex-direction: row;
@@ -140,5 +144,124 @@ body {
                 }
             }
         }
+    }
+}
+
+main {
+    font-family: inherit;
+
+    .hero {
+        width: 100%;
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url("../public/images/heros/hero-image_4.jpg") no-repeat;
+        background-color: #fff;
+        background-position: center;
+
+        @include desktop {
+            min-height: 80vh;
+        }
+
+        .hero__content {
+            text-align: center;
+            color: white;
+            
+            h2 {
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+    
+            p {
+                font-style: italic;
+            }
+        }
+    }
+
+    .resto-list {
+        width: 100%;
+        
+        .resto-list__header {
+            padding: 20px;
+            text-align: center;
+            border-top: 3px solid lightslategray;
+            border-bottom: 3px solid darkslategray;
+        }
+
+        .resto-list__body {
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 30px;
+            gap: 20px;
+
+            @include tablet {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @include desktop {
+                grid-template-columns: 1fr 1fr 1fr
+            }
+
+            .card {
+                width: 100%;
+                border-radius: 12px;
+                box-shadow: 3px 3px 5px lightgray;
+                overflow: hidden;
+
+                .card__header {
+                    position: relative;
+
+                    .city {
+                        display: block;
+                        min-width: 44px;
+                        min-height: 44px;
+                        padding: 15px;
+                        position: absolute;
+                        top: 10px;
+                        left: 0px;
+                        border-radius: 0 10px 10px 0;
+                        background-color: white;
+                        color: black;
+                        box-shadow: 5px 5px 5px  rgba(114, 114, 114, 0.5);
+                        font-style: italic;
+                        font-weight: 600;
+                    }
+
+                    .card__image {
+                        width: 100%;
+                        object-fit: cover;
+                        height: 300px;
+                    }
+                }
+
+                .card__body {
+                    padding: 20px;
+
+                    h4 {
+                        margin-bottom: 20px;
+                        font-size: 1.2rem;
+                    }
+
+                    .rating {
+                        display: block;
+                        margin-top: 20px;
+                        text-align: center;
+                        font-weight: 600;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: #ececec;
+    padding: 20px;
+
+    h2 {
+        font-size: 1rem;
+        text-align: center;
     }
 }

@@ -11,6 +11,7 @@ body {
   width: 100%;
   height: 100%;
   font-size: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body button {
@@ -30,6 +31,10 @@ body button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 @media screen and (min-width: 600px) {
@@ -176,5 +181,143 @@ body button {
 
 .header .navbar .navbar__list .navbar__items a:hover {
   border-bottom: 2px solid #000;
+}
+
+main {
+  font-family: inherit;
+}
+
+main .hero {
+  width: 100%;
+  min-height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url("../public/images/heros/hero-image_4.jpg") no-repeat;
+  background-color: #fff;
+  background-position: center;
+}
+
+@media screen and (min-width: 1280px) {
+  main .hero {
+    min-height: 80vh;
+  }
+}
+
+main .hero .hero__content {
+  text-align: center;
+  color: white;
+}
+
+main .hero .hero__content h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+main .hero .hero__content p {
+  font-style: italic;
+}
+
+main .resto-list {
+  width: 100%;
+}
+
+main .resto-list .resto-list__header {
+  padding: 20px;
+  text-align: center;
+  border-top: 3px solid lightslategray;
+  border-bottom: 3px solid darkslategray;
+}
+
+main .resto-list .resto-list__body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  padding: 30px;
+  gap: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  main .resto-list .resto-list__body {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  main .resto-list .resto-list__body {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+main .resto-list .resto-list__body .card {
+  width: 100%;
+  border-radius: 12px;
+  -webkit-box-shadow: 3px 3px 5px lightgray;
+          box-shadow: 3px 3px 5px lightgray;
+  overflow: hidden;
+}
+
+main .resto-list .resto-list__body .card .card__header {
+  position: relative;
+}
+
+main .resto-list .resto-list__body .card .card__header .city {
+  display: block;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 15px;
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  border-radius: 0 10px 10px 0;
+  background-color: white;
+  color: black;
+  -webkit-box-shadow: 5px 5px 5px rgba(114, 114, 114, 0.5);
+          box-shadow: 5px 5px 5px rgba(114, 114, 114, 0.5);
+  font-style: italic;
+  font-weight: 600;
+}
+
+main .resto-list .resto-list__body .card .card__header .card__image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 300px;
+}
+
+main .resto-list .resto-list__body .card .card__body {
+  padding: 20px;
+}
+
+main .resto-list .resto-list__body .card .card__body h4 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+main .resto-list .resto-list__body .card .card__body .rating {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+footer {
+  background-color: #ececec;
+  padding: 20px;
+}
+
+footer h2 {
+  font-size: 1rem;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

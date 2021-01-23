@@ -21,6 +21,10 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|jpe?g|svg)$/i,
+        use: 'file-loader',
+      }
     ],
   },
   plugins: [
