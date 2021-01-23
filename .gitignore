@@ -1,3 +1,8 @@
 package-lock.json
 node_modules
 dist
+eat-n-eat
+.firebase
+public
+.firebaserc
+firebase.json
