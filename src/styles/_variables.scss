@@ -1,0 +1,9 @@
+$colors: (
+    my-yellow: #f8dc81,
+    my-gray: #eff7e1,
+    my-lightblue: #a2d0c1,
+);
+
+@function color($color) {
+    @return map-get($colors, $color);
+}
