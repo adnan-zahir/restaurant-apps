@@ -33,6 +33,11 @@ body button:focus {
   border: 2px dashed;
 }
 
+body a {
+  min-width: 44px;
+  min-height: 44px;
+}
+
 body a:focus {
   border: 2px dashed;
 }
@@ -201,7 +206,6 @@ body a.skip:focus {
 
 .header .navbar .navbar__list .navbar__items {
   display: block;
-  padding: 5px 0;
 }
 
 @media screen and (min-width: 600px) {
@@ -218,6 +222,7 @@ body a.skip:focus {
   color: #000;
   -webkit-transition-duration: 300ms;
           transition-duration: 300ms;
+  padding: 13px 0;
 }
 
 @media screen and (min-width: 600px) {
