@@ -4,7 +4,7 @@ const restoList = document.querySelector(".resto-list__body");
 const restaurants = DATA.restaurants;
 restaurants.forEach(resto => {
     restoList.innerHTML += `
-    <div class="card">
+    <div class="card" tabindex="0">
         <div class="card__header">
             <div class="city">
                 ${resto.city}

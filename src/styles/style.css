@@ -7,6 +7,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -14,9 +18,48 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+@media screen and (min-width: 1400px) {
+  body {
+    font-size: 150%;
+  }
+}
+
 body button {
   min-width: 44px;
   min-height: 44px;
+}
+
+body button:focus {
+  border: 2px dashed;
+}
+
+body a:focus {
+  border: 2px dashed;
+}
+
+body a.skip {
+  background-color: #a2d0c1;
+  padding: 10px 15px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+  width: 30%;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  z-index: 100;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+body a.skip:focus {
+  -webkit-transform: translate(-50%, 0px);
+          transform: translate(-50%, 0px);
 }
 
 .header {
@@ -173,11 +216,19 @@ body button {
   border-bottom: 2px solid transparent;
   text-decoration: none;
   color: #000;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
 }
 
 @media screen and (min-width: 600px) {
   .header .navbar .navbar__list .navbar__items a {
     padding: 10px 20px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .header .navbar .navbar__list .navbar__items a {
+    font-size: 1.2em;
   }
 }
 
@@ -190,7 +241,7 @@ main {
 }
 
 main .hero {
-  width: 100%;
+  min-width: 100%;
   min-height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -201,9 +252,11 @@ main .hero {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url("../public/images/heros/hero-image_4.jpg") no-repeat;
+  background-image: url("../public/images/heros/hero-image_4.jpg");
   background-color: #fff;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media screen and (min-width: 1280px) {
@@ -234,6 +287,10 @@ main .resto-list .resto-list__header {
   padding: 20px;
   text-align: center;
   border-bottom: 3px solid #a2d0c1;
+}
+
+main .resto-list .resto-list__header h3 {
+  font-size: 1.5em;
 }
 
 main .resto-list .resto-list__body {
@@ -267,6 +324,10 @@ main .resto-list .resto-list__body .card {
           box-shadow: 3px 3px 5px lightgray;
   overflow: hidden;
   background-color: #fff;
+}
+
+main .resto-list .resto-list__body .card:focus {
+  border: 2px dashed;
 }
 
 main .resto-list .resto-list__body .card .card__header {
@@ -303,7 +364,7 @@ main .resto-list .resto-list__body .card .card__body {
 
 main .resto-list .resto-list__body .card .card__body h4 {
   margin-bottom: 20px;
-  font-size: 1.2rem;
+  font-size: 1.1em;
 }
 
 main .resto-list .resto-list__body .card .card__body .rating {
