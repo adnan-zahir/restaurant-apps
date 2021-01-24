@@ -15,7 +15,7 @@ body {
   width: 100%;
   height: 100%;
   font-size: 100%;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 @media screen and (min-width: 1400px) {
@@ -365,6 +365,10 @@ main .resto-list .resto-list__body .card .card__body {
 main .resto-list .resto-list__body .card .card__body h4 {
   margin-bottom: 20px;
   font-size: 1.1em;
+}
+
+main .resto-list .resto-list__body .card .card__body p {
+  word-spacing: 0.3em;
 }
 
 main .resto-list .resto-list__body .card .card__body .rating {
