@@ -6,6 +6,8 @@
     <title>Restaurant Apps Starter Project</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png">
+    <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
 </head>
 <body>
     <a class="skip" href="#resto-list">Skip to content?</a>
@@ -14,33 +16,28 @@
             <div class="header__title">
                 <h1>EAT n EAT</h1>
             </div>
-            <button class="hamburger-button" aria-label="Open/Close Menu">
+            <button class="hamburger-button" id="hamburgerButton" aria-label="Open/Close Menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
         </div>
-        <nav class="navbar">
+        <nav class="navbar" id="navigationDrawer">
             <ul class="navbar__list">
-                <li class="navbar__items"><a href="/">Home</a></li>
-                <li class="navbar__items"><a href="#">Favorites</a></li>
+                <li class="navbar__items"><a href="#/resto-list">Home</a></li>
+                <li class="navbar__items"><a href="#/favorites">Favorites</a></li>
                 <li class="navbar__items"><a href="https://github.com/adnan-zahir">About Us</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="hero" name="catchphrase">
+        <section class="hero" id="hero" name="catchphrase">
             <div class="hero__content">
                 <h2>Make your home your favorite restaurant</h2>
                 <p>Get any food to your home</p>
             </div>
         </section>
-        <section class="resto-list" name="restaurant list" id="resto-list">
-            <div class="resto-list__header" tabindex="0">
-                <h3>Restaurant List</h3>
-            </div>
-            <div class="resto-list__body">
-            </div>
+        <section class="resto-card" name="restaurant list" id="mainContent">
         </section>
     </main>
     <footer>
