@@ -11,6 +11,7 @@ import MenuGenerator from '../../utils/menu-generator';
 import MenuDropdownInitiator from '../../utils/menu-dropdown-initiator';
 import ReviewInitiator from '../../utils/review-initiator';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
+import FavoriteRestoIdb from '../../data/favoriterestaurant-idb';
 
 const Detail = {
   async render() {
@@ -34,6 +35,7 @@ const Detail = {
 
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      favoriteResto: FavoriteRestoIdb,
       resto: restaurant,
     });
 

@@ -6,7 +6,7 @@ const createRestoItemTemplate = (resto) => `
         <div class="city">
             ${resto.city}
         </div>
-        <img class="card__image" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="Restaurant">
+        <img class="card__image" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="Restaurant" loading="lazy">
         </img>
     </div>
     <div class="card__body">
@@ -59,13 +59,13 @@ const createRestoReviewTemplate = () => `
 `;
 
 const createLikeButtonTemplate = () => `
-  <button aria-label="like this movie" id="likeButton" class="like">
+  <button aria-label="like this resto" id="likeButton" class="like">
     <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;
 
 const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="likeButton" class="like">
+  <button aria-label="unlike this resto" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;

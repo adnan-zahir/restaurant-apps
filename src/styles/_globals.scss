@@ -225,14 +225,20 @@ main {
         align-items: center;
         justify-content: center;
         // background: url("../public/images/heros/hero-image_4.jpg") #fff center no-repeat cover;
-        background-image: url("../public/images/hero-image_4.jpg");
-        background-color: #fff;
+        background-image: 
+            url("../public/images/heros/hero-image_4-small.webp"),
+            url("../public/images/heros/hero-image_4-small.jpg");
+            background-color: #fff;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
 
         @include desktop {
             min-height: 80vh;
+            background-image: 
+                url("../public/images/heros/hero-image_4.webp"),
+                url("../public/images/heros/hero-image_4.jpg");
+                background-color: #fff;
         }
 
         .hero__content {
@@ -363,6 +369,7 @@ main {
 
             img.detail-image {
                 width: 100%;
+                max-width: 100vw;
                 border-radius: 0.2em 0.2em 0 0;
             }
         }
